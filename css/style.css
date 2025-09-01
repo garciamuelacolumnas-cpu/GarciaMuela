@@ -1,0 +1,103 @@
+/* 🌐 General (PC / Laptop) */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../img/fondo.png") no-repeat center center fixed;
+  background-size: cover; /* ✅ En PC llena bien la pantalla */
+  font-family: Arial, sans-serif;
+  color: #f5e0b8;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Contenedor central */
+.container.index {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Logo */
+.logo {
+  width: 220px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botones */
+.btn {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  background: transparent;
+  border: 2px solid #f5e0b8;
+  border-radius: 6px;
+  color: #f5e0b8;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f5e0b8;
+  color: #2c1a08;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #d8c6a5;
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+/* 🔥 Ajuste para iframes de Google Drive */
+iframe {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  overflow: hidden;
+  background: transparent; /* elimina el fondo gris */
+  min-height: 800px; /* asegura altura */
+}
+
+.iframe-container {
+  margin: 0;
+  padding: 0;
+  background: transparent; /* quita cualquier fondo gris extra */
+}
+
+/* 📱 Responsive móvil */
+@media (max-width: 600px) {
+  body {
+    background: url("../img/fondocel.png") no-repeat center top fixed;
+    background-size: cover;   /* ✅ Se adapta al alto/ancho del móvil */
+    background-color: #000;   /* relleno si sobra espacio */
+  }
+
+  .container.index {
+    max-width: 90%;
+    top: 50%; /* centrado dentro del cilindro del fondo móvil */
+  }
+
+  .logo {
+    width: 160px; /* ✅ se ajusta en móviles */
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  iframe {
+    min-height: 600px; /* 🔥 más compacto en móviles */
+  }
+}

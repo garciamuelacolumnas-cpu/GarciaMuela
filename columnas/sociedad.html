@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sociedad y Poder</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background: url("../img/fondo2.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #f5e0b8;
+      margin: 0;
+      overflow-y: auto;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .columnas {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #f5e0b8;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .columnas:hover {
+      background: rgba(245,224,184,0.2);
+    }
+
+    .columnas h2 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .columnas p {
+      font-size: 0.9rem;
+      color: #d8c6a5;
+    }
+
+    .iframe-container {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .btn-close, .btn-open {
+      margin: 10px 5px 10px 0;
+      padding: 8px 16px;
+      background: transparent;
+      border: 2px solid #f5e0b8;
+      border-radius: 6px;
+      color: #f5e0b8;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      float: right;
+      text-decoration: none;
+    }
+
+    .btn-close:hover, .btn-open:hover {
+      background: #f5e0b8;
+      color: #2c1a08;
+    }
+
+    .menu {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #f5e0b8;
+      border: 2px solid #f5e0b8;
+      padding: 8px 20px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background: #f5e0b8;
+      color: #2c1a08;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #d8c6a5;
+      margin: 20px 0;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SOCIEDAD Y PODER</h1>
+
+    <!-- Botón para volver al menú principal -->
+    <div class="menu">
+      <a href="../index.html">← Volver al menú principal</a>
+    </div>
+
+    <!-- Columna 1 (7 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe4')">
+      <h2>La lealtad que México olvidó : 7 de agosto de 2025</h2>
+      <p>Cuando la palabra era el último refugio de la dignidad</p>
+    </div>
+    <div class="iframe-container" id="iframe4">
+      <a href="https://drive.google.com/file/d/1YKJ_Gz8tcljeG9YTWKdXDap2UyWHMfEO/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe4')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1YKJ_Gz8tcljeG9YTWKdXDap2UyWHMfEO/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 2 (28 julio) -->
+    <div class="columnas" onclick="mostrarIframe('iframe3')">
+      <h2>La Indefensión Aprendida : 28 de julio de 2025</h2>
+      <p>El Llamado Urgente del Sueldo Moral</p>
+    </div>
+    <div class="iframe-container" id="iframe3">
+      <a href="https://drive.google.com/file/d/1c7tei6sx7ZXA20BggkiDPmo5y8eus78a/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe3')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1c7tei6sx7ZXA20BggkiDPmo5y8eus78a/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 3 (19 julio) -->
+    <div class="columnas" onclick="mostrarIframe('iframe2')">
+      <h2>Puño Arancelario Yankee : 19 de julio de 2025</h2>
+      <p>México al límite del cerco comercial</p>
+    </div>
+    <div class="iframe-container" id="iframe2">
+      <a href="https://drive.google.com/file/d/1-IFAO6595i2W9cY9dHcg4xX2R1URqV9W/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe2')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1-IFAO6595i2W9cY9dHcg4xX2R1URqV9W/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 4 (25 junio) -->
+    <div class="columnas" onclick="mostrarIframe('iframe1')">
+      <h2>La Cocaína del Mar : 25 de junio de 2025</h2>
+      <p>¿Una Legalización Encubierta para el Cártel de Sinaloa?</p>
+    </div>
+    <div class="iframe-container" id="iframe1">
+      <a href="https://drive.google.com/file/d/1w9u8SI90C7V42Zb6d9LiO3xfCactJlAP/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe1')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1w9u8SI90C7V42Zb6d9LiO3xfCactJlAP/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    © Guillermo Garcia Muela. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function mostrarIframe(id) {
+      document.querySelectorAll('.iframe-container').forEach(div => {
+        div.style.display = "none";
+      });
+      document.getElementById(id).style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function cerrarIframe(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</body>
+</html>

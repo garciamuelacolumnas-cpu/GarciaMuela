@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Interior</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      background: url("../img/fondo2.png") no-repeat center center fixed;
+      background-size: cover;
+      color: #f5e0b8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .columnas {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #f5e0b8;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .columnas:hover {
+      background: rgba(245,224,184,0.2);
+    }
+
+    .columnas h2 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .columnas p {
+      font-size: 0.9rem;
+      color: #d8c6a5;
+    }
+
+    .iframe-container {
+      margin-top: 20px;
+      display: none;
+      position: relative;
+    }
+
+    .btn-close, .btn-open {
+      margin: 10px 5px 10px 0;
+      padding: 8px 16px;
+      background: transparent;
+      border: 2px solid #f5e0b8;
+      border-radius: 6px;
+      color: #f5e0b8;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      float: right;
+      text-decoration: none;
+    }
+
+    .btn-close:hover, .btn-open:hover {
+      background: #f5e0b8;
+      color: #2c1a08;
+    }
+
+    .menu {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #f5e0b8;
+      border: 2px solid #f5e0b8;
+      padding: 8px 20px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background: #f5e0b8;
+      color: #2c1a08;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #d8c6a5;
+      margin-top: 40px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>VIDA INTERIOR</h1>
+
+    <!-- Botón para volver al menú principal -->
+    <div class="menu">
+      <a href="../index.html">← Volver al menú principal</a>
+    </div>
+
+    <!-- Columna 1 (31 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe0')">
+      <h2>¿Qué le preguntarías a Dios? : 31 de agosto de 2025</h2>
+      <p>Si solo pudieras hacerle una pregunta a Dios, ¿le pedirías una respuesta o una explicación?</p>
+    </div>
+    <div class="iframe-container" id="iframe0">
+      <a href="https://drive.google.com/file/d/13d5SCFMizbRzO9bZOoQ0geAAxcZ8XF_K/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe0')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/13d5SCFMizbRzO9bZOoQ0geAAxcZ8XF_K/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 2 (22 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe1')">
+      <h2>Me dejaste en visto : 22 de agosto de 2025</h2>
+      <p>El eco emocional que nadie se atreve a confesar</p>
+    </div>
+    <div class="iframe-container" id="iframe1">
+      <a href="https://drive.google.com/file/d/18MoIytokJPIahH5-6GWdurG19mDrSE3m/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe1')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/18MoIytokJPIahH5-6GWdurG19mDrSE3m/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 3 (19 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe2')">
+      <h2>10 de febrero, hoy : 19 de agosto de 2025</h2>
+      <p>Einstein tenía razón: cuando aparece la aseguradora, el tiempo colapsa</p>
+    </div>
+    <div class="iframe-container" id="iframe2">
+      <a href="https://drive.google.com/file/d/1h4WABN3hyi_DtwmnXRVqTuuy4zGSpwG8/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe2')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1h4WABN3hyi_DtwmnXRVqTuuy4zGSpwG8/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 4 (16 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe3')">
+      <h2>Hambre de Caricias : 16 de agosto de 2025</h2>
+      <p>Cuando lo anormal se volvió rutina y empezó a doler</p>
+    </div>
+    <div class="iframe-container" id="iframe3">
+      <a href="https://drive.google.com/file/d/1-sXQt8XZ3i_exlvKjsjywpjNehtQdIQb/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe3')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1-sXQt8XZ3i_exlvKjsjywpjNehtQdIQb/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 5 (10 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe4')">
+      <h2>No quiero morirme (todavía) : 10 de agosto de 2025</h2>
+      <p>¿Más años de vida o más vida a los años?</p>
+    </div>
+    <div class="iframe-container" id="iframe4">
+      <a href="https://drive.google.com/file/d/1jQqE7yJkiMrAVoA0fXaerqMNx3hCaVJA/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe4')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/1jQqE7yJkiMrAVoA0fXaerqMNx3hCaVJA/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+
+    <!-- Columna 6 (04 agosto) -->
+    <div class="columnas" onclick="mostrarIframe('iframe5')">
+      <h2>Déficit de INTENCIÓN : 04 de agosto de 2025</h2>
+      <p>Cuando el problema no es atención, sino rumbo</p>
+    </div>
+    <div class="iframe-container" id="iframe5">
+      <a href="https://drive.google.com/file/d/193YzdxOhOyTxY0zTFFwthKxA9F8gsGz0/view" target="_blank" class="btn-open">↗ Abrir</a>
+      <button class="btn-close" onclick="cerrarIframe('iframe5')">✖ Cerrar</button>
+      <iframe src="https://drive.google.com/file/d/193YzdxOhOyTxY0zTFFwthKxA9F8gsGz0/preview" width="100%" height="800" style="border:none;"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    © Guillermo Garcia Muela. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function mostrarIframe(id) {
+      document.querySelectorAll('.iframe-container').forEach(div => {
+        div.style.display = "none";
+      });
+      document.getElementById(id).style.display = "block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function cerrarIframe(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</body>
+</html>

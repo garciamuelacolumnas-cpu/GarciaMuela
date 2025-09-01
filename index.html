@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repositorio de Columnas</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("img/fondo.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #f5e0b8;
+      height: 100vh;
+    }
+
+    .container {
+      position: absolute;  /* ✅ centrado natural */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 80%;
+    }
+
+    /* Logo */
+    .logo {
+      width: 240px;   /* 🔥 un poco más grande para laptop */
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Títulos */
+    h1 {
+      font-size: 1.6rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      word-wrap: break-word;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    /* Botones */
+    .btn {
+      display: block;
+      width: 220px;
+      margin: 10px auto;
+      padding: 10px;
+      text-align: center;
+      background: transparent;
+      border: 2px solid #f5e0b8;
+      border-radius: 6px;
+      color: #f5e0b8;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f5e0b8;
+      color: #2c1a08;
+    }
+
+    /* Footer */
+    footer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      color: #d8c6a5;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .logo {
+        width: 160px;  /* 🔥 más chico en móvil */
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        width: 90%;
+        font-size: 0.9rem;
+      }
+
+      .container {
+        max-width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 🔥 Logo -->
+    <img src="img/firma.png" alt="Logo" class="logo">
+
+    <!-- Título -->
+    <h1>
+      REPOSITORIO <br>
+      COLUMNAS DE OPINIÓN
+    </h1>
+
+
+    <!-- Menú -->
+    <div class="menu">
+      <a href="columnas/sociedad.html" class="btn">Sociedad y Poder</a>
+      <a href="columnas/ia.html" class="btn">IA</a>
+      <a href="columnas/vida.html" class="btn">Vida Interior</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © Guillermo Garcia Muela. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
