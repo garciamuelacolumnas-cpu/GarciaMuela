@@ -17,7 +17,7 @@
     }
 
     .container {
-      position: absolute;  /* ✅ centrado natural */
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -27,7 +27,7 @@
 
     /* Logo */
     .logo {
-      width: 240px;   /* 🔥 un poco más grande para laptop */
+      width: 240px;
       margin-bottom: 20px;
       display: block;
       margin-left: auto;
@@ -81,30 +81,40 @@
       opacity: 0.8;
     }
 
-    /* Responsive */
+    /* 📱 Responsive móvil */
     @media (max-width: 600px) {
+      body {
+        background: url("img/fondocel.jpg") no-repeat center top fixed !important;
+        background-size: cover !important;
+        background-color: #000;
+      }
+
       .logo {
-        width: 160px;  /* 🔥 más chico en móvil */
+        width: 120px; /* 🔥 más chico en móvil */
+        margin-bottom: 10px;
       }
 
       h1 {
-        font-size: 1.2rem;
+        font-size: 0.9rem; /* 🔥 mínimo legible */
+        margin-bottom: 8px;
       }
 
       .btn {
-        width: 90%;
-        font-size: 0.9rem;
+        width: 150px;   /* 🔥 botones más estrechos */
+        font-size: 0.75rem; /* 🔥 texto más compacto */
+        padding: 6px;
+        margin: 6px auto;
       }
 
-      .container {
-        max-width: 95%;
+      footer {
+        font-size: 0.6rem; /* 🔥 texto más chico en footer */
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- 🔥 Logo -->
+    <!-- Logo -->
     <img src="img/firma.png" alt="Logo" class="logo">
 
     <!-- Título -->
@@ -112,7 +122,6 @@
       REPOSITORIO <br>
       COLUMNAS DE OPINIÓN
     </h1>
-
 
     <!-- Menú -->
     <div class="menu">

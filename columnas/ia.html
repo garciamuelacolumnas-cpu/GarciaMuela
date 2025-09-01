@@ -1,118 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IA</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url("../img/fondo2.png") no-repeat center center fixed;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IA</title>
+
+<style>
+  /* ====== FONDO (PC) ====== */
+  body{
+    margin:0;
+    padding:0;
+    background: url("../img/fondo2.png") center center / cover no-repeat fixed;
+    color:#f5e0b8;
+    font-family: Arial, sans-serif;
+    min-height:100vh;
+    overflow-y:auto;
+  }
+
+  /* ====== CONTENEDOR ====== */
+  .container{
+    max-width: 820px;           /* más estrecho que antes */
+    margin: 32px auto;          /* menos margen */
+    padding: 28px 18px;         /* menos padding */
+    background: rgba(0,0,0,.55);
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+
+  h1{
+    text-align:center;
+    margin: 0 0 22px;
+    font-size: 1.9rem;          /* un poco más compacto */
+    line-height:1.15;
+  }
+
+  .menu{ text-align:center; margin-bottom:18px; }
+  .menu a{
+    text-decoration:none;
+    color:#f5e0b8;
+    border:2px solid #f5e0b8;
+    padding:8px 18px;
+    border-radius:6px;
+    transition:.2s;
+  }
+  .menu a:hover{ background:#f5e0b8; color:#2c1a08; }
+
+  /* ====== TARJETAS ====== */
+  .columnas{
+    margin-bottom:16px;         /* menos separación */
+    padding:12px 14px;          /* más estrecha */
+    border:1px solid #f5e0b8;
+    border-radius:10px;
+    background: rgba(0,0,0,.38);
+    cursor:pointer;
+    transition: background .25s ease, transform .15s ease;
+  }
+  .columnas:hover{ background: rgba(245,224,184,.16); }
+  .columnas h2{
+    font-size:1.05rem;
+    line-height:1.25;
+    margin:0 0 6px;
+  }
+  .columnas p{
+    font-size:.92rem;
+    margin:0;
+    color:#d8c6a5;
+  }
+
+  /* ====== ÁREA DEL IFRAME ====== */
+  .iframe-container{
+    display:none;
+    margin-top:14px;
+  }
+
+  /* Fila de acciones (Abrir / Cerrar) sin floats */
+  .tools{
+    display:flex;
+    gap:8px;
+    justify-content:flex-end;
+    margin:10px 0;
+  }
+  .btn{
+    padding:8px 16px;
+    border:2px solid #f5e0b8;
+    border-radius:6px;
+    color:#f5e0b8;
+    background:transparent;
+    font-size:.9rem;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.2s;
+  }
+  .btn:hover{ background:#f5e0b8; color:#2c1a08; }
+
+  iframe{
+    width:100%;
+    height:800px;
+    border:none;
+    display:block;
+    background:transparent; /* no “gris” alrededor */
+  }
+
+  footer{
+    text-align:center;
+    font-size:.8rem;
+    margin: 28px 0 18px;
+    color:#d8c6a5;
+    opacity:.85;
+  }
+
+  /* ====== MÓVIL ====== */
+  @media (max-width:600px){
+    /* Fondo diferente en móvil */
+    body{
+      background-image: url("../img/fondocel2.png");
+      background-position: center top;
       background-size: cover;
-      color: #f5e0b8;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-      overflow-y: auto;
+      background-attachment: fixed;
+      background-color:#0b0a09; /* respaldo */
     }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px 20px;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      box-sizing: border-box;
+    .container{
+      max-width: 90%;
+      padding: 20px 14px;
+      margin: 22px auto;
+      border-radius: 10px;
     }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
+    h1{ font-size: 1.6rem; margin-bottom:18px; }
+    .columnas{ padding:10px 12px; }
+    .columnas h2{ font-size: 1rem; }
+    .columnas p{ font-size: .9rem; }
 
-    .columnas {
-      margin-bottom: 20px;
-      padding: 15px;
-      border: 1px solid #f5e0b8;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background: rgba(0,0,0,0.4);
-    }
+    .tools{ gap:6px; }
+    .btn{ padding:7px 14px; font-size:.88rem; }
 
-    .columnas:hover {
-      background: rgba(245,224,184,0.2);
-    }
-
-    .columnas h2 {
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-    }
-
-    .columnas p {
-      font-size: 0.9rem;
-      color: #d8c6a5;
-    }
-
-    .iframe-container {
-      margin-top: 20px;
-      display: none;
-    }
-
-    .btn-close, .btn-open {
-      margin: 10px 5px 10px 0;
-      padding: 8px 16px;
-      background: transparent;
-      border: 2px solid #f5e0b8;
-      border-radius: 6px;
-      color: #f5e0b8;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      float: right;
-      text-decoration: none;
-    }
-
-    .btn-close:hover, .btn-open:hover {
-      background: #f5e0b8;
-      color: #2c1a08;
-    }
-
-    .menu {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .menu a {
-      text-decoration: none;
-      color: #f5e0b8;
-      border: 2px solid #f5e0b8;
-      padding: 8px 20px;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .menu a:hover {
-      background: #f5e0b8;
-      color: #2c1a08;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      margin-top: 40px;
-      color: #d8c6a5;
-      opacity: 0.8;
-    }
-  </style>
+    iframe{ height: 70vh; }   /* más compacto en móvil */
+  }
+</style>
 </head>
 <body>
   <div class="container">
     <h1>INTELIGENCIA ARTIFICIAL</h1>
 
-    <!-- Botón para volver al menú principal -->
     <div class="menu">
       <a href="../index.html">← Volver al menú principal</a>
     </div>
@@ -123,9 +153,11 @@
       <p>Si puedes leer esto, ya ocurrió un milagro</p>
     </div>
     <div class="iframe-container" id="iframe1">
-      <a href="https://drive.google.com/file/d/1WbjwCnGktbktBfDzdxuaY_lBpSCs1ozI/view" target="_blank" class="btn-open">↗ Abrir</a>
-      <button class="btn-close" onclick="cerrarIframe('iframe1')">✖ Cerrar</button>
-      <iframe src="https://drive.google.com/file/d/1WbjwCnGktbktBfDzdxuaY_lBpSCs1ozI/preview" width="100%" height="800" style="border:none;"></iframe>
+      <div class="tools">
+        <a class="btn" href="https://drive.google.com/file/d/1WbjwCnGktbktBfDzdxuaY_lBpSCs1ozI/view" target="_blank" rel="noopener">↗ Abrir</a>
+        <button class="btn" onclick="cerrarIframe('iframe1')">✖ Cerrar</button>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1WbjwCnGktbktBfDzdxuaY_lBpSCs1ozI/preview"></iframe>
     </div>
 
     <!-- Columna 2 -->
@@ -134,9 +166,11 @@
       <p>Pensar duele... pero dejar de pensar mata</p>
     </div>
     <div class="iframe-container" id="iframe2">
-      <a href="https://drive.google.com/file/d/1ub6jpSy9hfSxv8t4hWmvMP1Lt1572KrX/view" target="_blank" class="btn-open">↗ Abrir</a>
-      <button class="btn-close" onclick="cerrarIframe('iframe2')">✖ Cerrar</button>
-      <iframe src="https://drive.google.com/file/d/1ub6jpSy9hfSxv8t4hWmvMP1Lt1572KrX/preview" width="100%" height="800" style="border:none;"></iframe>
+      <div class="tools">
+        <a class="btn" href="https://drive.google.com/file/d/1ub6jpSy9hfSxv8t4hWmvMP1Lt1572KrX/view" target="_blank" rel="noopener">↗ Abrir</a>
+        <button class="btn" onclick="cerrarIframe('iframe2')">✖ Cerrar</button>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1ub6jpSy9hfSxv8t4hWmvMP1Lt1572KrX/preview"></iframe>
     </div>
 
     <!-- Columna 3 -->
@@ -145,9 +179,11 @@
       <p>No compitas con el algoritmo: dirige lo que no puede sentir</p>
     </div>
     <div class="iframe-container" id="iframe3">
-      <a href="https://drive.google.com/file/d/1jQqE7yJkiMrAVoA0fXaerqMNx3hCaVJA/view" target="_blank" class="btn-open">↗ Abrir</a>
-      <button class="btn-close" onclick="cerrarIframe('iframe3')">✖ Cerrar</button>
-      <iframe src="https://drive.google.com/file/d/1jQqE7yJkiMrAVoA0fXaerqMNx3hCaVJA/preview" width="100%" height="800" style="border:none;"></iframe>
+      <div class="tools">
+        <a class="btn" href="https://drive.google.com/file/d/1jQqE7yJkiMrAVoA0fXaerqMNx3hCaVJA/view" target="_blank" rel="noopener">↗ Abrir</a>
+        <button class="btn" onclick="cerrarIframe('iframe3')">✖ Cerrar</button>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1jQqE7yJkiMrAVoA0fXaerqMNx3hCaVJA/preview"></iframe>
     </div>
 
     <!-- Columna 4 -->
@@ -156,9 +192,11 @@
       <p>¿Podrá la IA vencer la censura?</p>
     </div>
     <div class="iframe-container" id="iframe4">
-      <a href="https://drive.google.com/file/d/1nw6tgFq4tpiMHT0jB5HTCt1TD0zNFk5J/view" target="_blank" class="btn-open">↗ Abrir</a>
-      <button class="btn-close" onclick="cerrarIframe('iframe4')">✖ Cerrar</button>
-      <iframe src="https://drive.google.com/file/d/1nw6tgFq4tpiMHT0jB5HTCt1TD0zNFk5J/preview" width="100%" height="800" style="border:none;"></iframe>
+      <div class="tools">
+        <a class="btn" href="https://drive.google.com/file/d/1nw6tgFq4tpiMHT0jB5HTCt1TD0zNFk5J/view" target="_blank" rel="noopener">↗ Abrir</a>
+        <button class="btn" onclick="cerrarIframe('iframe4')">✖ Cerrar</button>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1nw6tgFq4tpiMHT0jB5HTCt1TD0zNFk5J/preview"></iframe>
     </div>
 
     <!-- Columna 5 -->
@@ -167,27 +205,24 @@
       <p>La inteligencia artificial como reflejo y brújula de nuestra sociedad</p>
     </div>
     <div class="iframe-container" id="iframe5">
-      <a href="https://drive.google.com/file/d/1UwqpARVQwQX4S-0YRar1fy7KkBuHsSMX/view" target="_blank" class="btn-open">↗ Abrir</a>
-      <button class="btn-close" onclick="cerrarIframe('iframe5')">✖ Cerrar</button>
-      <iframe src="https://drive.google.com/file/d/1UwqpARVQwQX4S-0YRar1fy7KkBuHsSMX/preview" width="100%" height="800" style="border:none;"></iframe>
+      <div class="tools">
+        <a class="btn" href="https://drive.google.com/file/d/1UwqpARVQwQX4S-0YRar1fy7KkBuHsSMX/view" target="_blank" rel="noopener">↗ Abrir</a>
+        <button class="btn" onclick="cerrarIframe('iframe5')">✖ Cerrar</button>
+      </div>
+      <iframe src="https://drive.google.com/file/d/1UwqpARVQwQX4S-0YRar1fy7KkBuHsSMX/preview"></iframe>
     </div>
   </div>
 
-  <footer>
-    <p>© Guillermo Garcia Muela. Todos los derechos reservados.</p>
-  </footer>
+  <footer>© Guillermo Garcia Muela. Todos los derechos reservados.</footer>
 
   <script>
-    function mostrarIframe(id) {
-      document.querySelectorAll('.iframe-container').forEach(div => {
-        div.style.display = "none";
-      });
-      document.getElementById(id).style.display = "block";
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    function mostrarIframe(id){
+      document.querySelectorAll('.iframe-container').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({top: 0, behavior: 'smooth'});
     }
-
-    function cerrarIframe(id) {
-      document.getElementById(id).style.display = "none";
+    function cerrarIframe(id){
+      document.getElementById(id).style.display = 'none';
     }
   </script>
 </body>

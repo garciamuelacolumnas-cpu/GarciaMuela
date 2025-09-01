@@ -3,11 +3,11 @@ body {
   margin: 0;
   padding: 0;
   background: url("../img/fondo.png") no-repeat center center fixed;
-  background-size: cover; /* ✅ En PC llena bien la pantalla */
+  background-size: cover;
   font-family: Arial, sans-serif;
   color: #f5e0b8;
   min-height: 100vh;
-  overflow-y: auto;
+  overflow-y: auto; /* ✅ scroll en PC */
 }
 
 /* Contenedor central */
@@ -59,45 +59,29 @@ footer {
   opacity: 0.8;
 }
 
-/* 🔥 Ajuste para iframes de Google Drive */
-iframe {
-  display: block;
-  margin: 0 auto;
-  border: none;
-  overflow: hidden;
-  background: transparent; /* elimina el fondo gris */
-  min-height: 800px; /* asegura altura */
-}
-
-.iframe-container {
-  margin: 0;
-  padding: 0;
-  background: transparent; /* quita cualquier fondo gris extra */
-}
-
 /* 📱 Responsive móvil */
 @media (max-width: 600px) {
   body {
-    background: url("../img/fondocel.png") no-repeat center top fixed;
-    background-size: cover;   /* ✅ Se adapta al alto/ancho del móvil */
-    background-color: #000;   /* relleno si sobra espacio */
+    background: url("../img/fondocel.jpg") no-repeat center top fixed;
+    background-size: cover;
+    background-color: #000;
+    overflow: hidden;   /* 🚫 quita scroll en móvil */
+    height: 100vh;      /* ocupa toda la pantalla */
   }
 
   .container.index {
     max-width: 90%;
-    top: 50%; /* centrado dentro del cilindro del fondo móvil */
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .logo {
-    width: 160px; /* ✅ se ajusta en móviles */
+    width: 160px;
   }
 
   .btn {
-    width: 90%;
-    font-size: 0.95rem;
-  }
-
-  iframe {
-    min-height: 600px; /* 🔥 más compacto en móviles */
+    width: 85%;
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
