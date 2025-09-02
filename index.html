@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Repositorio de Columnas</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
   <style>
+    /* Fondo (desktop) */
     body {
       margin: 0;
       padding: 0;
@@ -14,9 +15,11 @@
       font-family: Arial, sans-serif;
       color: #f5e0b8;
       height: 100vh;
+      overflow-y: auto;
     }
 
-    .container {
+    /* Contenido centrado */
+    .container.index {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -25,28 +28,13 @@
       max-width: 80%;
     }
 
-    /* Logo */
-    .logo {
-      width: 240px;
-      margin-bottom: 20px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     /* Títulos */
     h1 {
       font-size: 1.6rem;
       line-height: 1.3;
-      margin-bottom: 10px;
+      margin: 0 0 16px 0;
       word-wrap: break-word;
       text-align: center;
-    }
-
-    h2 {
-      font-size: 1rem;
-      margin-bottom: 20px;
-      font-weight: normal;
     }
 
     /* Botones */
@@ -64,62 +52,72 @@
       text-decoration: none;
       transition: 0.3s;
     }
+    .btn:hover { background: #f5e0b8; color: #2c1a08; }
 
-    .btn:hover {
-      background: #f5e0b8;
-      color: #2c1a08;
+    /* Logo (ahora va debajo del menú) */
+    .logo-bottom {
+      width: 220px;
+      display: block;
+      margin: 20px auto 0 auto; /* espacio encima del logo */
     }
 
-    /* Footer */
+    /* Footer en dos líneas */
     footer {
       position: fixed;
-      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 0.8rem;
+      bottom: 10px;
+      text-align: center;
       color: #d8c6a5;
-      opacity: 0.8;
+      opacity: 0.85;
+      font-size: 0.85rem;
+      line-height: 1.25rem;
+    }
+    footer p {
+      margin: 0; /* dos líneas, sin separación extra */
     }
 
-    /* 📱 Responsive móvil */
+    /* Móvil */
     @media (max-width: 600px) {
       body {
-        background: url("img/fondocel.jpg") no-repeat center top fixed !important;
-        background-size: cover !important;
-        background-color: #000;
+        /* Fondo específico para móvil y sin scroll */
+        background: url("img/fondocel.jpg") no-repeat center center fixed;
+        background-size: cover;
+        height: 100svh;
+        overflow: hidden;
       }
 
-      .logo {
-        width: 120px; /* 🔥 más chico en móvil */
-        margin-bottom: 10px;
+      .container.index {
+        max-width: 90%;
+        top: 50%;
       }
 
-      h1 {
-        font-size: 0.9rem; /* 🔥 mínimo legible */
-        margin-bottom: 8px;
-      }
+      h1 { font-size: 1.25rem; }
 
       .btn {
-        width: 150px;   /* 🔥 botones más estrechos */
-        font-size: 0.75rem; /* 🔥 texto más compacto */
-        padding: 6px;
-        margin: 6px auto;
+        width: 88%;
+        font-size: 0.95rem;
+        padding: 9px 10px;
+      }
+
+      .logo-bottom {
+        width: 160px; /* logo más compacto en móvil */
+        margin-top: 16px;
       }
 
       footer {
-        font-size: 0.6rem; /* 🔥 texto más chico en footer */
+        bottom: 8px;
+        font-size: 0.8rem;
+        line-height: 1.15rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <img src="img/firma.png" alt="Logo" class="logo">
-
+  <div class="container index">
     <!-- Título -->
     <h1>
-      REPOSITORIO <br>
+      REPOSITORIO <br />
       COLUMNAS DE OPINIÓN
     </h1>
 
@@ -129,11 +127,15 @@
       <a href="columnas/ia.html" class="btn">IA</a>
       <a href="columnas/vida.html" class="btn">Vida Interior</a>
     </div>
+
+    <!-- Logo ahora debajo de los botones -->
+    <img src="img/firma.png" alt="Logo Guillermo García Muela" class="logo-bottom" />
   </div>
 
-  <!-- Footer -->
+  <!-- Footer en dos líneas -->
   <footer>
-    © Guillermo Garcia Muela. Todos los derechos reservados.
+    <p>© Guillermo Garcia Muela.</p>
+    <p>Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
