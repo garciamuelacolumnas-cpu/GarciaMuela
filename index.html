@@ -30,9 +30,9 @@
 
     /* Títulos */
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       line-height: 1.3;
-      margin: 0 0 16px 0;
+      margin: 0 0 14px 0;
       word-wrap: break-word;
       text-align: center;
     }
@@ -40,25 +40,25 @@
     /* Botones */
     .btn {
       display: block;
-      width: 220px;
-      margin: 10px auto;
-      padding: 10px;
+      width: 200px;
+      margin: 8px auto;
+      padding: 8px;
       text-align: center;
       background: transparent;
       border: 2px solid #f5e0b8;
       border-radius: 6px;
       color: #f5e0b8;
-      font-size: 1rem;
+      font-size: 0.95rem;
       text-decoration: none;
       transition: 0.3s;
     }
     .btn:hover { background: #f5e0b8; color: #2c1a08; }
 
-    /* Logo (ahora va debajo del menú) */
+    /* Logo (debajo del menú) */
     .logo-bottom {
-      width: 220px;
+      width: 200px;
       display: block;
-      margin: 20px auto 0 auto; /* espacio encima del logo */
+      margin: 16px auto 0 auto;
     }
 
     /* Footer en dos líneas */
@@ -66,21 +66,18 @@
       position: fixed;
       left: 50%;
       transform: translateX(-50%);
-      bottom: 10px;
+      bottom: 8px;
       text-align: center;
       color: #d8c6a5;
       opacity: 0.85;
-      font-size: 0.85rem;
-      line-height: 1.25rem;
+      font-size: 0.8rem;
+      line-height: 1.15rem;
     }
-    footer p {
-      margin: 0; /* dos líneas, sin separación extra */
-    }
+    footer p { margin: 0; }
 
-    /* Móvil */
+    /* 📱 Móvil */
     @media (max-width: 600px) {
       body {
-        /* Fondo específico para móvil y sin scroll */
         background: url("img/fondocel.jpg") no-repeat center center fixed;
         background-size: cover;
         height: 100svh;
@@ -92,23 +89,23 @@
         top: 50%;
       }
 
-      h1 { font-size: 1.25rem; }
+      h1 { font-size: 1rem; }
 
       .btn {
-        width: 88%;
-        font-size: 0.95rem;
-        padding: 9px 10px;
+        width: 150px;
+        font-size: 0.8rem;
+        padding: 6px;
+        margin: 6px auto;
       }
 
       .logo-bottom {
-        width: 160px; /* logo más compacto en móvil */
-        margin-top: 16px;
+        width: 120px; /* 🔥 tamaño mínimo recomendado para móvil */
+        margin-top: 12px;
       }
 
       footer {
-        bottom: 8px;
-        font-size: 0.8rem;
-        line-height: 1.15rem;
+        font-size: 0.7rem;
+        line-height: 1rem;
       }
     }
   </style>
@@ -128,7 +125,7 @@
       <a href="columnas/vida.html" class="btn">Vida Interior</a>
     </div>
 
-    <!-- Logo ahora debajo de los botones -->
+    <!-- Logo debajo de los botones -->
     <img src="img/firma.png" alt="Logo Guillermo García Muela" class="logo-bottom" />
   </div>
 
