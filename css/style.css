@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("../img/fondo.png") no-repeat center center fixed;
+  background: url("../img/fondo.png") no-repeat center center fixed; /* fondo desktop */
   background-size: cover;
   font-family: Arial, sans-serif;
   color: #f5e0b8;
@@ -20,8 +20,9 @@ body {
   max-width: 80%;
 }
 
-/* Logo */
-.logo {
+/* Logo (para desktop; en móvil lo reducimos abajo) */
+.logo,
+.logo-bottom {
   width: 220px;
   margin-bottom: 10px;
   display: block;
@@ -50,7 +51,7 @@ body {
   color: #2c1a08;
 }
 
-/* Footer */
+/* Footer (estilo base; el index fija la posición) */
 footer {
   text-align: center;
   font-size: 0.8rem;
@@ -62,26 +63,41 @@ footer {
 /* 📱 Responsive móvil */
 @media (max-width: 600px) {
   body {
-    background: url("../img/fondocel.jpg") no-repeat center top fixed;
+    background: url("../img/fondocel.jpg") no-repeat center top fixed; /* fondo móvil */
     background-size: cover;
     background-color: #000;
-    overflow: hidden;   /* 🚫 quita scroll en móvil */
-    height: 100vh;      /* ocupa toda la pantalla */
+    overflow: hidden;        /* 🚫 sin scroll vertical */
+    height: 100svh;          /* alto estable con barra de URL */
   }
 
   .container.index {
     max-width: 90%;
-    top: 56%;                         /* 🔥 lo movemos más abajo */
-    transform: translate(-50%, -50%);
+    top: 57svh !important;             /* posición fija dentro del cilindro */
+    transform: translate(-50%, -50%) !important;
   }
 
-  .logo {
-    width: 160px;
+  /* Tamaños “mini” */
+  h1 {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
   }
 
   .btn {
-    width: 85%;
-    font-size: 0.9rem;
-    padding: 8px;
+    width: 150px;             /* compacto */
+    font-size: 0.8rem;
+    padding: 6px;
+    margin: 6px auto;
+  }
+
+  .logo,
+  .logo-bottom {
+    width: 120px;             /* logo pequeño en móvil */
+    margin-top: 12px;
+  }
+
+  /* Fallback si el navegador no soporta svh */
+  @supports not (top: 1svh) {
+    .container.index { top: 57% !important; }
   }
 }

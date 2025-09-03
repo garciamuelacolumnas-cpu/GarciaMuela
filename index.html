@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Repositorio de Columnas</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- 🚀 cache-busting -->
+  <link rel="stylesheet" href="css/style.css?v=10" />
   <style>
-    /* 🌐 Fondo (desktop) */
+    /* 🌐 Fondo desktop */
     body {
       margin: 0;
       padding: 0;
@@ -18,7 +19,35 @@
       overflow-y: auto;
     }
 
-    /* Contenido centrado */
+    /* 📱 Fondo + tamaños mini en móvil */
+    @media (max-width: 600px) {
+      body {
+        background: url("img/fondocel.jpg") no-repeat center center fixed;
+        background-size: cover;
+        height: 100svh;
+        overflow: hidden;
+      }
+
+      h1 {
+        font-size: 1rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .btn {
+        width: 150px !important;
+        font-size: 0.8rem !important;
+        padding: 6px !important;
+        margin: 6px auto !important;
+      }
+
+      .logo-bottom {
+        width: 120px !important;
+        margin-top: 12px !important;
+      }
+    }
+
+    /* Contenido centrado (base; móvil lo ajusta style.css) */
     .container.index {
       position: absolute;
       top: 50%;
@@ -28,7 +57,7 @@
       max-width: 80%;
     }
 
-    /* Títulos */
+    /* Títulos (desktop) */
     h1 {
       font-size: 1.5rem;
       line-height: 1.3;
@@ -37,7 +66,7 @@
       text-align: center;
     }
 
-    /* Botones */
+    /* Botones (desktop) */
     .btn {
       display: block;
       width: 200px;
@@ -54,14 +83,14 @@
     }
     .btn:hover { background: #f5e0b8; color: #2c1a08; }
 
-    /* Logo (debajo del menú) */
+    /* Logo debajo de los botones */
     .logo-bottom {
       width: 200px;
       display: block;
       margin: 16px auto 0 auto;
     }
 
-    /* Footer en dos líneas (compacto) */
+    /* Footer fijo */
     footer {
       position: fixed;
       left: 50%;
@@ -71,45 +100,11 @@
       color: #d8c6a5;
       opacity: 0.85;
       font-size: 0.8rem;
-      line-height: 1rem; /* 🔥 compacto */
+      line-height: 1rem;
     }
     footer p {
       margin: 0;
       padding: 0;
-    }
-
-    /* 📱 Móvil */
-    @media (max-width: 600px) {
-      body {
-        background: url("img/fondocel.jpg") no-repeat center center fixed;
-        background-size: cover;
-        height: 100svh;
-        overflow: hidden;
-      }
-
-      .container.index {
-        max-width: 90%;
-        top: 50%;
-      }
-
-      h1 { font-size: 1rem; }
-
-      .btn {
-        width: 150px;
-        font-size: 0.8rem;
-        padding: 6px;
-        margin: 6px auto;
-      }
-
-      .logo-bottom {
-        width: 120px; /* 🔥 tamaño mínimo recomendado para móvil */
-        margin-top: 12px;
-      }
-
-      footer {
-        font-size: 0.7rem;
-        line-height: 0.9rem; /* 🔥 aún más compacto en móvil */
-      }
     }
   </style>
 </head>
@@ -132,7 +127,7 @@
     <img src="img/firma.png" alt="Logo Guillermo García Muela" class="logo-bottom" />
   </div>
 
-  <!-- Footer en dos líneas -->
+  <!-- Footer -->
   <footer>
     <p>© Guillermo García Muela.</p>
     <p>Todos los derechos reservados.</p>
