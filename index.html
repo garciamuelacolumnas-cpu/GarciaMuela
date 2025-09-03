@@ -6,7 +6,7 @@
   <title>Repositorio de Columnas</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* Fondo (desktop) */
+    /* 🌐 Fondo (desktop) */
     body {
       margin: 0;
       padding: 0;
@@ -61,7 +61,7 @@
       margin: 16px auto 0 auto;
     }
 
-    /* Footer en dos líneas */
+    /* Footer en dos líneas (compacto) */
     footer {
       position: fixed;
       left: 50%;
@@ -71,9 +71,12 @@
       color: #d8c6a5;
       opacity: 0.85;
       font-size: 0.8rem;
-      line-height: 1.15rem;
+      line-height: 1rem; /* 🔥 compacto */
     }
-    footer p { margin: 0; }
+    footer p {
+      margin: 0;
+      padding: 0;
+    }
 
     /* 📱 Móvil */
     @media (max-width: 600px) {
@@ -105,7 +108,7 @@
 
       footer {
         font-size: 0.7rem;
-        line-height: 1rem;
+        line-height: 0.9rem; /* 🔥 aún más compacto en móvil */
       }
     }
   </style>
@@ -131,7 +134,7 @@
 
   <!-- Footer en dos líneas -->
   <footer>
-    <p>© Guillermo Garcia Muela.</p>
+    <p>© Guillermo García Muela.</p>
     <p>Todos los derechos reservados.</p>
   </footer>
 </body>

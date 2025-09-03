@@ -71,7 +71,7 @@ footer {
 
   .container.index {
     max-width: 90%;
-    top: 50%;
+    top: 56%;                         /* 🔥 lo movemos más abajo */
     transform: translate(-50%, -50%);
   }
 

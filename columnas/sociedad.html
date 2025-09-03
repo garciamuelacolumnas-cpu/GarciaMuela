@@ -62,10 +62,16 @@
       line-height:1.25;
       margin:0 0 6px;
     }
-    .card p{
+    .summary{
       font-size:.92rem;
       margin:0;
       color:#d8c6a5;
+    }
+    .date{
+      font-size:.85rem;
+      color:#bda986;
+      margin:4px 0 0 0;
+      opacity:.95;
     }
 
     /* ===== Iframe + herramientas ===== */
@@ -100,14 +106,15 @@
     footer{
       text-align:center;
       font-size:.8rem;
+      margin: 28px 0 18px;
       color:#d8c6a5;
-      margin:28px 0 18px;
       opacity:.85;
+      line-height: 1rem; /* compacto en 2 líneas */
     }
+    footer p{ margin:0; }
 
     /* ===== Móvil ===== */
     @media (max-width:600px){
-      /* fondo diferente en móvil */
       body{
         background-image: url("../img/fondocel2.png");
         background-position: center top;
@@ -124,11 +131,11 @@
       h1{ font-size:1.6rem; margin-bottom:18px; }
       .card{ padding:10px 12px; }
       .card h2{ font-size:1rem; }
-      .card p{ font-size:.9rem; }
+      .summary{ font-size:.9rem; }
 
       .tools{ gap:6px; }
       .btn{ padding:7px 14px; font-size:.88rem; }
-      iframe{ height:70vh; }  /* más compacto en móvil */
+      iframe{ height:70vh; }
     }
   </style>
 </head>
@@ -142,8 +149,9 @@
 
     <!-- Columna 1 (7 agosto) -->
     <div class="card" onclick="mostrarIframe('iframe4')">
-      <h2>La lealtad que México olvidó : 7 de agosto de 2025</h2>
-      <p>Cuando la palabra era el último refugio de la dignidad</p>
+      <h2>La lealtad que México olvidó</h2>
+      <p class="summary">Cuando la palabra era el último refugio de la dignidad</p>
+      <p class="date">7 de agosto de 2025</p>
     </div>
     <div class="iframe-container" id="iframe4">
       <div class="tools">
@@ -155,8 +163,9 @@
 
     <!-- Columna 2 (28 julio) -->
     <div class="card" onclick="mostrarIframe('iframe3')">
-      <h2>La Indefensión Aprendida : 28 de julio de 2025</h2>
-      <p>El Llamado Urgente del Sueldo Moral</p>
+      <h2>La Indefensión Aprendida</h2>
+      <p class="summary">El Llamado Urgente del Sueldo Moral</p>
+      <p class="date">28 de julio de 2025</p>
     </div>
     <div class="iframe-container" id="iframe3">
       <div class="tools">
@@ -168,8 +177,9 @@
 
     <!-- Columna 3 (19 julio) -->
     <div class="card" onclick="mostrarIframe('iframe2')">
-      <h2>Puño Arancelario Yankee : 19 de julio de 2025</h2>
-      <p>México al límite del cerco comercial</p>
+      <h2>Puño Arancelario Yankee</h2>
+      <p class="summary">México al límite del cerco comercial</p>
+      <p class="date">19 de julio de 2025</p>
     </div>
     <div class="iframe-container" id="iframe2">
       <div class="tools">
@@ -181,8 +191,9 @@
 
     <!-- Columna 4 (25 junio) -->
     <div class="card" onclick="mostrarIframe('iframe1')">
-      <h2>La Cocaína del Mar : 25 de junio de 2025</h2>
-      <p>¿Una Legalización Encubierta para el Cártel de Sinaloa?</p>
+      <h2>La Cocaína del Mar</h2>
+      <p class="summary">¿Una Legalización Encubierta para el Cártel de Sinaloa?</p>
+      <p class="date">25 de junio de 2025</p>
     </div>
     <div class="iframe-container" id="iframe1">
       <div class="tools">
@@ -193,8 +204,8 @@
     </div>
   </div>
 
-    <footer>
-    <p>© Guillermo Garcia Muela.</p>
+  <footer>
+    <p>© Guillermo García Muela.</p>
     <p>Todos los derechos reservados.</p>
   </footer>
 
