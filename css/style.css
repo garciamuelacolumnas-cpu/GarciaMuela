@@ -72,7 +72,7 @@ footer {
 
   .container.index {
     max-width: 90%;
-    top: 57svh !important;             /* posición fija dentro del cilindro */
+    top: 54svh !important;             /* posición fija dentro del cilindro */
     transform: translate(-50%, -50%) !important;
   }
 
