@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No quiero morirme (todavía) — Columna de opinión</title>
+
+  <!-- Enlace al CSS general -->
+  <link rel="stylesheet" href="../../../css/style.css?v=11" />
+
+  <!-- SEO básico + Open Graph -->
+  <meta name="description" content="¿Más años de vida o más vida a los años?" />
+  <meta property="og:title" content="No quiero morirme (todavía)" />
+  <meta property="og:description" content="¿Más años de vida o más vida a los años?" />
+  <meta property="og:type" content="article" />
+
+  <!-- ✅ URL absoluta de la imagen para previsualización -->
+  <meta property="og:image" content="https://garciamuela.com/img/autor.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="No quiero morirme (todavía)" />
+  <meta name="twitter:description" content="¿Más años de vida o más vida a los años?" />
+  <meta name="twitter:image" content="https://garciamuela.com/img/autor.jpeg" />
+
+  <style>
+    /* --- Look tipo PDF --- */
+    .article--pdf{
+      background:#fff !important;
+      color:#111 !important;
+      border:1px solid #e6e6e6 !important;
+      box-shadow: 0 1px 0 rgba(0,0,0,.04);
+    }
+
+    /* Encabezado centrado */
+    .article-header { text-align:center; margin-bottom:18px; }
+    .article-header h1{ font-size:1.6rem; margin:0 0 6px; color:#000; }
+    .article-header .subtitle{ font-style:italic; margin:0 0 8px; color:#333; }
+    .article-header .article-meta{ font-size:.95rem; color:#444; line-height:1.3; }
+
+    /* Imagen del autor */
+    .author-image{
+      width:100px; height:100px; border-radius:50%; object-fit:cover;
+      margin:10px auto; display:block;
+      border:3px solid #ddd; box-shadow:0 2px 6px rgba(0,0,0,.2);
+    }
+
+    /* Botones de zoom */
+    .article--pdf .btn{
+      border:2px solid #000 !important; color:#000 !important;
+      background:transparent; transition:0.2s;
+    }
+    .article--pdf .btn:hover{ background:#000 !important; color:#fff !important; }
+
+    /* Zoom usando variable */
+    :root{ --article-scale: 1; }
+    #contenido{ font-size: calc(1rem * var(--article-scale)); }
+    #contenido p, #contenido li, #contenido blockquote,
+    #contenido h1, #contenido h2, #contenido h3{ font-size:1em; }
+
+    .progress-wrap{ margin-bottom: 12px; }
+  </style>
+</head>
+
+<body class="page">
+  <div class="container">
+    <!-- Botón de regreso -->
+    <div class="menu" style="margin-bottom:12px;">
+      <a href="../08/agosto.html">← Agosto 2025</a>
+    </div>
+
+    <!-- Artículo -->
+    <article class="article article--pdf" id="contenido">
+      <!-- Barra de progreso -->
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <!-- Encabezado centrado -->
+      <div class="article-header">
+        <h1>No quiero morirme (todavía)</h1>
+        <p class="subtitle">¿Más años de vida o más vida a los años?</p>
+
+        <!-- Imagen del autor -->
+        <img src="https://garciamuela.com/img/autor.jpeg" alt="Autor de la columna" class="author-image">
+
+        <div class="article-meta">
+          <div>Por: Guillermo García Muela</div>
+          <time datetime="2025-08-10">10 de agosto de 2025</time>
+        </div>
+      </div>
+
+      <!-- Botones de zoom -->
+      <div class="tools" style="justify-content:flex-end; margin-top:6px;">
+        <button class="btn inline" id="btnAumentar" aria-label="Aumentar tamaño de texto">A+</button>
+        <button class="btn inline" id="btnDisminuir" aria-label="Disminuir tamaño de texto">A−</button>
+      </div>
+
+      <!-- Texto -->
+      <p>
+        Imagina que mañana te devuelven diez años de vida. ¿Los inviertes o los mandas a “guardar para después” junto a la dieta que iniciarás Mañana Lunes?
+      </p>
+      <p>
+        Ya no hablamos de futurismo cursi. Desde que Shinya Yamanaka recibió el Nobel de Medicina en 2012, la reprogramación celular dejó de ser truco de laboratorio para convertirse en mapa. Con tres de esos factores (OSK), un equipo revirtió marcadores biológicos de edad y devolvió visión a ratones viejos. Dicho en términos coloquiales: cuando ordenas la memoria epigenética, el organismo responde.
+      </p>
+      <p>
+        La promesa no es inmortalidad; es tiempo contable. Hay científicos que sostienen que en cinco años podríamos revertir alrededor de diez años biológicos. Con eso, la pregunta deja de ser “¿lo crees?” y se vuelve “¿qué decides prolongar?”.
+      </p>
+      <p>
+        Aquí va el golpe honesto: ¿más años de vida o más vida a los años? Lo primero es calendario; lo segundo, propósito. Y el propósito no se compra ni lo vende ningún laboratorio.
+      </p>
+      <p>
+        Porque sí, quizá podamos vivir 150 años pero ¿para qué quieres 150 si hoy no te alcanza la tarde? Regalamos horas al scroll infinito y luego juramos que “no hay tiempo” para leer, hacer ejercicio o para una buena plática sin prisas. Si no cambiamos la ecuación, sólo alargaremos la lista de pendientes.
+      </p>
+      <p>
+        Y, por lo que más quieras: lo que decidas hacer, por favor, no lo hagas en un concierto de Coldplay. ;)
+      </p>
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© Guillermo García Muela.</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Progreso de lectura
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop)/(h.scrollHeight - h.clientHeight) * 100;
+      progress.style.width = (scrolled || 0) + '%';
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+
+    // Zoom de texto
+    const btnMas = document.getElementById('btnAumentar');
+    const btnMenos = document.getElementById('btnDisminuir');
+    let scale = 1.0;
+    const applyScale = () => {
+      document.documentElement.style.setProperty('--article-scale', scale.toString());
+    };
+    btnMas.addEventListener('click', () => {
+      scale = Math.min(1.6, +(scale + 0.1).toFixed(2));
+      applyScale();
+    });
+    btnMenos.addEventListener('click', () => {
+      scale = Math.max(0.8, +(scale - 0.1).toFixed(2));
+      applyScale();
+    });
+    applyScale();
+  </script>
+</body>
+</html>

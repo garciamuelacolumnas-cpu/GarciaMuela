@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Me dejaste en visto — Columna de opinión</title>
+
+  <!-- Enlace al CSS general -->
+  <link rel="stylesheet" href="../../../css/style.css?v=11" />
+
+  <!-- SEO + Open Graph -->
+  <meta name="description" content="Me dejaste en visto — El eco emocional que nadie se atreve a confesar." />
+  <meta property="og:title" content="Me dejaste en visto" />
+  <meta property="og:description" content="El eco emocional que nadie se atreve a confesar." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://garciamuela.com/img/autor.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Me dejaste en visto" />
+  <meta name="twitter:description" content="El eco emocional que nadie se atreve a confesar." />
+  <meta name="twitter:image" content="https://garciamuela.com/img/autor.jpeg" />
+
+  <style>
+    .article--pdf{background:#fff!important;color:#111!important;border:1px solid #e6e6e6!important;box-shadow:0 1px 0 rgba(0,0,0,.04);}
+    .article-header{text-align:center;margin-bottom:18px;}
+    .article-header h1{font-size:1.6rem;margin:0 0 6px;color:#000;}
+    .article-header .subtitle{font-style:italic;margin:0 0 8px;color:#333;}
+    .article-header .article-meta{font-size:.95rem;color:#444;line-height:1.3;}
+    .author-image{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:10px auto;display:block;border:3px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+    .article--pdf .btn{border:2px solid #000!important;color:#000!important;background:transparent;transition:.2s;}
+    .article--pdf .btn:hover{background:#000!important;color:#fff!important;}
+    :root{--article-scale:1;}
+    #contenido{font-size:calc(1rem * var(--article-scale));}
+    #contenido p,#contenido li,#contenido blockquote,#contenido h1,#contenido h2,#contenido h3{font-size:1em;}
+    .progress-wrap{margin-bottom:12px;}
+  </style>
+</head>
+
+<body class="page">
+  <div class="container">
+    <div class="menu" style="margin-bottom:12px;">
+      <a href="../08/agosto.html">← Agosto 2025</a>
+    </div>
+
+    <article class="article article--pdf" id="contenido">
+      <div class="progress-wrap" aria-hidden="true"><div class="progress" id="progress"></div></div>
+
+      <div class="article-header">
+        <h1>Me dejaste en visto</h1>
+        <p class="subtitle">El eco emocional que nadie se atreve a confesar</p>
+
+        <!-- Imagen autor -->
+        <img src="https://garciamuela.com/img/autor.jpeg" alt="Autor de la columna" class="author-image">
+
+        <div class="article-meta">
+          <div>Por: Guillermo García Muela</div>
+          <time datetime="2025-08-22">22 de agosto de 2025</time>
+        </div>
+      </div>
+
+      <div class="tools" style="justify-content:flex-end;margin-top:6px;">
+        <button class="btn inline" id="btnAumentar">A+</button>
+        <button class="btn inline" id="btnDisminuir">A−</button>
+      </div>
+
+      <!-- Texto -->
+      <p>Son las once de la noche. Y ahí están. Dos palomitas grises que, de pronto, se tiñen de azul. Silencio absoluto. Ni una palabra, ni una explicación. Solo el vacío que deja un “visto” sin respuesta. Pero no es cualquier vacío, es uno que duele de una manera indescriptible, cargado de incertidumbre.</p>
+
+      <p>Al pensar en el tema de esta columna, lo primero que me llamó la atención fue ese símbolo: Una “palomita”. ¿Nunca lo pensaste? Si dibujas una palomita eso es: Un ave volando, una figura de paz, un símbolo sagrado para muchos.</p>
+
+      <p>Y sin embargo, cuando esas palomitas digitales se pintan de azul en WhatsApp, dejan de ser palomas para volverse buitres. No simbólicamente, emocionalmente, se posan sobre nuestra ansiedad como si olieran la debilidad.</p>
+
+      <p>Desde su llegada en 2014, el “visto” ha sido causante de peleas de pareja, amistades rotas y dramas familiares. ¿Y por qué? Porque el cerebro, cuando se enfrenta a un silencio, tiende a llenarlo de interpretaciones: ¿Dije algo mal? ¿Le molestó? ¿Ya no quiere hablar conmigo?</p>
+
+      <p>Eso tiene nombre científico: Rumiación mental y también tiene nombre coloquial: Capítulo de <em>La Rosa de Guadalupe</em> o para quienes ya coleccionamos cumpleaños: Episodio de <em>Mujer, casos de la vida real</em>.</p>
+
+      <p>Antes, sobrevivíamos si no te contestaba alguien; simplemente dejabas recado con quien lo hiciera: Su hermano, su mamá o si contestaban podías ser cómplice de un: “¡No te tardes que voy a ocupar el teléfono!”.</p>
+
+      <p>Hoy, diez minutos sin respuesta se sienten como traición. Pero el problema no es el tiempo. Es la expectativa.</p>
+
+      <p>El “visto” solo significa eso: Que lo leyó Y PUNTO! lo demás es un guión que escribimos nosotros, línea por línea, con tinta de inseguridad.</p>
+
+      <p>Lo que duele no es la pantalla en silencio, sino lo que tu cabeza grita cuando nadie más responde.</p>
+    </article>
+  </div>
+
+  <footer>
+    <p>© Guillermo García Muela.</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const progress=document.getElementById('progress');
+    document.addEventListener('scroll',()=>{const h=document.documentElement;const scrolled=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=(scrolled||0)+'%';},{passive:true});
+    const btnMas=document.getElementById('btnAumentar');const btnMenos=document.getElementById('btnDisminuir');let scale=1.0;
+    const applyScale=()=>{document.documentElement.style.setProperty('--article-scale',scale.toString());};
+    btnMas.addEventListener('click',()=>{scale=Math.min(1.6,+(scale+0.1).toFixed(2));applyScale();});
+    btnMenos.addEventListener('click',()=>{scale=Math.max(0.8,+(scale-0.1).toFixed(2));applyScale();});
+    applyScale();
+  </script>
+</body>
+</html>

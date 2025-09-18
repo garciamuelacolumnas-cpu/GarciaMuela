@@ -2,129 +2,36 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repositorio de Columnas</title>
-  <!-- 🚀 cache-busting -->
-  <link rel="stylesheet" href="css/style.css?v=10" />
-  <style>
-    /* 🌐 Fondo desktop */
-    body {
-      margin: 0;
-      padding: 0;
-      background: url("img/fondo.png") no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      color: #f5e0b8;
-      height: 100vh;
-      overflow-y: auto;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Repositorio — Columnas de Opinión</title>
 
-    /* 📱 Fondo + tamaños mini en móvil */
-    @media (max-width: 600px) {
-      body {
-        background: url("img/fondocel.jpg") no-repeat center center fixed;
-        background-size: cover;
-        height: 100svh;
-        overflow: hidden;
-      }
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="./css/style.css?v=16" />
 
-      h1 {
-        font-size: 1rem !important;
-        line-height: 1.25 !important;
-        margin-bottom: 10px !important;
-      }
-
-      .btn {
-        width: 150px !important;
-        font-size: 0.8rem !important;
-        padding: 6px !important;
-        margin: 6px auto !important;
-      }
-
-      .logo-bottom {
-        width: 120px !important;
-        margin-top: 12px !important;
-      }
-    }
-
-    /* Contenido centrado (base; móvil lo ajusta style.css) */
-    .container.index {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      max-width: 80%;
-    }
-
-    /* Títulos (desktop) */
-    h1 {
-      font-size: 1.5rem;
-      line-height: 1.3;
-      margin: 0 0 14px 0;
-      word-wrap: break-word;
-      text-align: center;
-    }
-
-    /* Botones (desktop) */
-    .btn {
-      display: block;
-      width: 200px;
-      margin: 8px auto;
-      padding: 8px;
-      text-align: center;
-      background: transparent;
-      border: 2px solid #f5e0b8;
-      border-radius: 6px;
-      color: #f5e0b8;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .btn:hover { background: #f5e0b8; color: #2c1a08; }
-
-    /* Logo debajo de los botones */
-    .logo-bottom {
-      width: 200px;
-      display: block;
-      margin: 16px auto 0 auto;
-    }
-
-    /* Footer fijo */
-    footer {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 8px;
-      text-align: center;
-      color: #d8c6a5;
-      opacity: 0.85;
-      font-size: 0.8rem;
-      line-height: 1rem;
-    }
-    footer p {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+  <!-- SEO + OG -->
+  <meta name="description" content="Repositorio de columnas de opinión de Guillermo García Muela." />
+  <meta property="og:title" content="Repositorio de Columnas de Opinión" />
+  <meta property="og:description" content="Consulta las columnas por mes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./img/firma.png" />
+  <meta property="og:locale" content="es_MX" />
 </head>
+
 <body>
+  <!-- Pantalla principal dentro del cilindro -->
   <div class="container index">
-    <!-- Título -->
-    <h1>
-      REPOSITORIO <br />
-      COLUMNAS DE OPINIÓN
-    </h1>
+    <h1>REPOSITORIO<br/>COLUMNAS DE OPINIÓN</h1>
 
-    <!-- Menú -->
-    <div class="menu">
-      <a href="columnas/sociedad.html" class="btn">Sociedad y Poder</a>
-      <a href="columnas/ia.html" class="btn">IA</a>
-      <a href="columnas/vida.html" class="btn">Vida Interior</a>
-    </div>
+    <!-- ===== Meses en píldoras ===== -->
+    <nav class="month-list" aria-label="Elegir mes">
+  <a class="pill" href="columnas/2025/06/Junio.html">Junio</a>
+  <a class="pill" href="columnas/2025/07/Julio.html">Julio</a>
+  <a class="pill" href="columnas/2025/08/Agosto.html">Agosto</a>
+  <a class="pill" href="columnas/2025/09/Septiembre.html">Septiembre</a>
+</nav>
 
-    <!-- Logo debajo de los botones -->
-    <img src="img/firma.png" alt="Logo Guillermo García Muela" class="logo-bottom" />
+    <!-- Firma -->
+    <img class="logo-bottom" src="./img/firma.png" alt="Guillermo García Muela" />
   </div>
 
   <!-- Footer -->

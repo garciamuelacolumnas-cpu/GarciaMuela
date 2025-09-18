@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micrófono invisible activado — Columna de opinión</title>
+
+  <!-- Enlace al CSS general -->
+  <link rel="stylesheet" href="../../../css/style.css?v=11" />
+
+  <!-- SEO + Open Graph -->
+  <meta name="description" content="Micrófono invisible activado — La IA ya capta tu habla interna; la pregunta es quién apaga." />
+  <meta property="og:title" content="Micrófono invisible activado" />
+  <meta property="og:description" content="La IA ya capta tu habla interna; la pregunta es quién apaga." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://garciamuela.com/img/autor.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Micrófono invisible activado" />
+  <meta name="twitter:description" content="La IA ya capta tu habla interna; la pregunta es quién apaga." />
+  <meta name="twitter:image" content="https://garciamuela.com/img/autor.jpeg" />
+
+  <style>
+    .article--pdf{background:#fff!important;color:#111!important;border:1px solid #e6e6e6!important;box-shadow:0 1px 0 rgba(0,0,0,.04);}
+    .article-header{text-align:center;margin-bottom:18px;}
+    .article-header h1{font-size:1.6rem;margin:0 0 6px;color:#000;}
+    .article-header .subtitle{font-style:italic;margin:0 0 8px;color:#333;}
+    .article-header .article-meta{font-size:.95rem;color:#444;line-height:1.3;}
+    .author-image{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:10px auto;display:block;border:3px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+    .article--pdf .btn{border:2px solid #000!important;color:#000!important;background:transparent;transition:.2s;}
+    .article--pdf .btn:hover{background:#000!important;color:#fff!important;}
+    :root{--article-scale:1;}
+    #contenido{font-size:calc(1rem * var(--article-scale));}
+    #contenido p,#contenido li,#contenido blockquote,#contenido h1,#contenido h2,#contenido h3{font-size:1em;}
+    .progress-wrap{margin-bottom:12px;}
+  </style>
+</head>
+
+<body class="page">
+  <div class="container">
+    <div class="menu" style="margin-bottom:12px;">
+      <a href="../09/septiembre.html">← Septiembre 2025</a>
+    </div>
+
+    <article class="article article--pdf" id="contenido">
+      <div class="progress-wrap" aria-hidden="true"><div class="progress" id="progress"></div></div>
+
+      <div class="article-header">
+        <h1>Micrófono invisible activado</h1>
+        <p class="subtitle">La IA ya capta tu habla interna; la pregunta es quién apaga</p>
+
+        <!-- Imagen autor -->
+        <img src="https://garciamuela.com/img/autor.jpeg" alt="Autor de la columna" class="author-image">
+
+        <div class="article-meta">
+          <div>Por: Guillermo García Muela</div>
+          <time datetime="2025-09-12">12 de septiembre de 2025</time>
+        </div>
+      </div>
+
+      <div class="tools" style="justify-content:flex-end;margin-top:6px;">
+        <button class="btn inline" id="btnAumentar">A+</button>
+        <button class="btn inline" id="btnDisminuir">A−</button>
+      </div>
+
+      <p>Imagina un debate en México donde, además del guión, podamos ver el intento de decir la verdad. El 8 de septiembre de 2025, AlterEgo, empresa surgida del MIT, mostró un dispositivo que te pones (sin cirugía) y que convierte señales de los músculos del habla, antes de hablar, en palabras.</p>
+      <p>Te responde por vibración en el hueso del oído, no “lee mentes”; detecta lo que ibas a decir un instante antes, es una gran ayuda para quien perdió la voz y bien usado, puede hacer más difícil mentir en público.</p>
+      <p>La idea no es espiar, es dar cuentas. Imagina a cada político activando un “micrófono previo” voluntario al responder. No sabremos su mundo privado, pero sí, si formó internamente una frase distinta a la que dijo. Eso cambia el teatro, menos maquillaje, más congruencia.</p>
+      <p>Para que funcione sin abusos, tres reglas básicas: permiso claro y cancelable; revisiones técnicas hechas por terceros; y un botón físico para apagarlo al instante, en la oreja y bajo control del usuario. Sin esas reglas, mejor ni prenderlo.</p>
+      <p>¿Riesgos? Varios. Puede fallar, sesgar o terminar en manos de un gobierno autoritario, por eso, orden antes que reflectores, pruebas independientes de precisión, registro de errores y castigos si alguien intenta usarlo sin permiso.</p>
+      <p>Primero clínicas y después el espectáculo, el orden importa, el punto no es oír “lo que piensan”, sino saber lo que estaban por decir y en un país donde lo que no se dice duele más que lo que se dice mal, abrir ese pequeño espacio “con garantías” ya sería avance suficiente para mover la aguja.</p>
+      <p><strong>No asusta lo que el aparato oye; asusta quién decide cuándo nos apaga.</strong></p>
+      <p><a href="https://www.media.mit.edu/projects/alterego/overview/" target="_blank">Más información oficial aquí</a></p>
+    </article>
+  </div>
+
+  <footer>
+    <p>© Guillermo García Muela.</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const progress=document.getElementById('progress');
+    document.addEventListener('scroll',()=>{const h=document.documentElement;const scrolled=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;progress.style.width=(scrolled||0)+'%';},{passive:true});
+    const btnMas=document.getElementById('btnAumentar');const btnMenos=document.getElementById('btnDisminuir');let scale=1.0;
+    const applyScale=()=>{document.documentElement.style.setProperty('--article-scale',scale.toString());};
+    btnMas.addEventListener('click',()=>{scale=Math.min(1.6,+(scale+0.1).toFixed(2));applyScale();});
+    btnMenos.addEventListener('click',()=>{scale=Math.max(0.8,+(scale-0.1).toFixed(2));applyScale();});
+    applyScale();
+  </script>
+</body>
+</html>
