@@ -49,6 +49,35 @@
     #contenido p,#contenido li,#contenido blockquote,#contenido h1,#contenido h2,#contenido h3{font-size:1em;}
     .progress-wrap{margin-bottom:12px;}
     .callout{margin:18px auto 6px; text-align:center; font-weight:700; letter-spacing:.4px;}
+
+    /* NUEVO CONTROL DE ZOOM (tipo Google) */
+    .zoom-control {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f8f8f8;
+      box-shadow: 0 1px 3px rgba(0,0,0,.1);
+      margin-right: 4px;
+    }
+    .zoom-control button {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      width: 36px;
+      height: 32px;
+      cursor: pointer;
+      color: #111;
+      transition: background .2s, transform .1s;
+    }
+    .zoom-control button:hover {
+      background: #eee;
+      transform: scale(1.05);
+    }
+    .zoom-control button:active {
+      transform: scale(0.95);
+    }
   </style>
 </head>
 
@@ -80,8 +109,10 @@
 
       <!-- Herramientas -->
       <div class="tools" style="justify-content:flex-end;margin-top:6px;">
-        <button class="btn inline" id="btnAumentar" aria-label="Aumentar tamaño de texto">A+</button>
-        <button class="btn inline" id="btnDisminuir" aria-label="Disminuir tamaño de texto">A−</button>
+        <div class="zoom-control">
+          <button id="btnDisminuir" aria-label="Disminuir tamaño de texto">−</button>
+          <button id="btnAumentar" aria-label="Aumentar tamaño de texto">+</button>
+        </div>
       </div>
 
       <!-- Texto -->
