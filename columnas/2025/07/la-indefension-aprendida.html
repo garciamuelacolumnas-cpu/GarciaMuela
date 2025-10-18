@@ -13,10 +13,8 @@
   <meta property="og:title" content="La Indefensión Aprendida" />
   <meta property="og:description" content="El Llamado Urgente del Sueldo Moral." />
   <meta property="og:type" content="article" />
-
   <!-- ✅ URL absoluta para previsualización en redes -->
-  <meta property="og:image" content="garciamuela.com/img/autor.jpeg" />
-
+  <meta property="og:image" content="https://garciamuela.com/img/autor.jpeg" />
   <meta property="og:locale" content="es_MX" />
 
   <!-- Google Analytics -->
@@ -71,18 +69,6 @@
       box-shadow:0 2px 6px rgba(0,0,0,.2);
     }
 
-    /* Botones de zoom */
-    .article--pdf .btn{
-      border:2px solid #000 !important;
-      color:#000 !important;
-      background:transparent;
-      transition:0.2s;
-    }
-    .article--pdf .btn:hover{
-      background:#000 !important;
-      color:#fff !important;
-    }
-
     /* Zoom usando variable */
     :root{ --article-scale: 1; }
     #contenido{ font-size: calc(1rem * var(--article-scale)); }
@@ -92,6 +78,30 @@
     }
 
     .progress-wrap{ margin-bottom: 12px; }
+
+    /* Controles de zoom modernos */
+    .zoom-control {
+      display:inline-flex;
+      align-items:center;
+      border:1px solid #ccc;
+      border-radius:8px;
+      overflow:hidden;
+      background:#f8f8f8;
+      box-shadow:0 1px 3px rgba(0,0,0,.1);
+      margin-right:4px;
+    }
+    .zoom-control button {
+      background:none;
+      border:none;
+      font-size:1.2rem;
+      width:36px;
+      height:32px;
+      cursor:pointer;
+      color:#111;
+      transition:background .2s, transform .1s;
+    }
+    .zoom-control button:hover { background:#eee; transform:scale(1.05); }
+    .zoom-control button:active { transform:scale(0.95); }
   </style>
 </head>
 
@@ -115,7 +125,7 @@
         <p class="subtitle">El Llamado Urgente del Sueldo Moral</p>
 
         <!-- Imagen del autor -->
-        <img src="garciamuela.com/img/autor.jpeg" alt="Autor de la columna" class="author-image">
+        <img src="https://garciamuela.com/img/autor.jpeg" alt="Autor de la columna" class="author-image">
 
         <div class="article-meta">
           <div>Por: Guillermo García Muela</div>
@@ -123,10 +133,12 @@
         </div>
       </div>
 
-      <!-- Botones de zoom -->
+      <!-- Controles de zoom -->
       <div class="tools" style="justify-content:flex-end; margin-top:6px;">
-        <button class="btn inline" id="btnAumentar" aria-label="Aumentar tamaño de texto">A+</button>
-        <button class="btn inline" id="btnDisminuir" aria-label="Disminuir tamaño de texto">A−</button>
+        <div class="zoom-control" aria-label="Control de tamaño de texto">
+          <button id="btnDisminuir" aria-label="Disminuir tamaño de texto">−</button>
+          <button id="btnAumentar" aria-label="Aumentar tamaño de texto">+</button>
+        </div>
       </div>
 
       <!-- Texto -->
